@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thai Romanization — แปลงอักษรไทยเป็นโรมัน (RTGS)</title>
+<meta name="description" content="เครื่องมือแปลงอักษรไทยเป็นอักษรโรมันตามหลัก RTGS พร้อมเครื่องหมายวรรณยุกต์ ใช้งานได้ทันทีบนมือถือและคอมพิวเตอร์ ไม่ต้องติดตั้ง">
+<meta name="theme-color" content="#0f766e">
+<link rel="canonical" href="https://thai-roman.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ThaiRomanize">
+<meta property="og:locale" content="th_TH">
+<meta property="og:url" content="https://thai-roman.vercel.app/">
+<meta property="og:title" content="Thai Romanization — แปลงอักษรไทยเป็นโรมัน (RTGS)">
+<meta property="og:description" content="พิมพ์หรือวางข้อความภาษาไทย รับคำอ่านอักษรโรมันตามหลัก RTGS พร้อมเครื่องหมายวรรณยุกต์ ใช้งานฟรีทันทีบนมือถือ ไม่ต้องติดตั้งแอป">
+<meta property="og:image" content="https://thai-roman.vercel.app/assets/img/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="420">
+<meta property="og:image:alt" content="ThaiRomanize — แปลงอักษรไทยเป็นอักษรโรมัน">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thai Romanization — แปลงอักษรไทยเป็นโรมัน (RTGS)">
+<meta name="twitter:description" content="พิมพ์หรือวางข้อความภาษาไทย รับคำอ่านอักษรโรมันตามหลัก RTGS พร้อมเครื่องหมายวรรณยุกต์ ใช้งานฟรีทันทีบนมือถือ">
+<meta name="twitter:image" content="https://thai-roman.vercel.app/assets/img/og-image.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='20' width='100' height='100' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23fbbf24' font-family='sans-serif' font-weight='700'%3EAa%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#converter">ข้ามไปยังเครื่องมือแปลง</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">ก</span>
+      <span class="brand-text">Thai<em>Romanize</em></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="เปิดเมนู">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#converter">แปลงข้อความ</a>
+      <a href="#guide">คู่มือ</a>
+      <a href="#consonants">พยัญชนะ</a>
+      <a href="#vowels">สระ</a>
+      <a href="#tones">วรรณยุกต์</a>
+      <a href="#faq">คำถามที่พบบ่อย</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <h1>แปลงอักษรไทย<br>เป็นอักษรโรมัน</h1>
+      <p class="hero-sub">พิมพ์หรือวางข้อความภาษาไทย แล้วรับคำอ่านแบบอักษรโรมันตามหลัก<strong> Royal Thai General System (RTGS)</strong> พร้อมเครื่องหมายวรรณยุกต์ ใช้งานได้ทันทีบนมือถือ ไม่ต้องติดตั้งแอป</p>
+      <div class="hero-cta">
+        <a href="#converter" class="btn btn-primary">เริ่มแปลงข้อความ ↓</a>
+        <a href="#guide" class="btn btn-ghost">วิธีใช้งาน</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONVERTER -->
+  <section class="converter-section" id="converter">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>เครื่องมือแปลงอักษร</h2>
+        <p>รองรับข้อความยาว หลายบรรทัด ตัวเลข และภาษาอังกฤษปนได้</p>
+      </div>
+
+      <div class="converter-card">
+
+        <div class="controls-bar">
+          <div class="control-group">
+            <span class="control-label">เครื่องหมายวรรณยุกต์</span>
+            <label class="switch">
+              <input type="checkbox" id="toneToggle" checked>
+              <span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span>
+              <span class="switch-text" id="toneToggleText">เปิด (sà-wàt-dii)</span>
+            </label>
+          </div>
+
+          <div class="control-group">
+            <span class="control-label">ตัวคั่นพยางค์</span>
+            <div class="seg-control" id="sepControl" role="radiogroup" aria-label="ตัวคั่นพยางค์">
+              <button type="button" data-sep="join" role="radio" aria-checked="false">
+                <span class="seg-title">ติดกัน</span><span class="seg-example">sawatdii</span>
+              </button>
+              <button type="button" data-sep="space" role="radio" aria-checked="false">
+                <span class="seg-title">เว้นวรรค</span><span class="seg-example">sa wat dii</span>
+              </button>
+              <button type="button" data-sep="hyphen" class="is-active" role="radio" aria-checked="true">
+                <span class="seg-title">ขีดกลาง</span><span class="seg-example">sa-wat-dii</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <span class="control-label">ตัวพิมพ์ใหญ่-เล็ก</span>
+            <div class="seg-control" id="caseControl" role="radiogroup" aria-label="ตัวพิมพ์ใหญ่-เล็ก">
+              <button type="button" data-case="lower" class="is-active" role="radio" aria-checked="true">
+                <span class="seg-title">พิมพ์เล็ก</span><span class="seg-example">sa wat dii</span>
+              </button>
+              <button type="button" data-case="sentence" role="radio" aria-checked="false">
+                <span class="seg-title">ต้นประโยคใหญ่</span><span class="seg-example">Sa wat dii</span>
+              </button>
+              <button type="button" data-case="title" role="radio" aria-checked="false">
+                <span class="seg-title">ทุกพยางค์ใหญ่</span><span class="seg-example">Sa Wat Dii</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="converter-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <label for="thaiInput">ข้อความภาษาไทย</label>
+              <button type="button" class="chip-btn" id="clearBtn">ล้าง ✕</button>
+            </div>
+            <textarea id="thaiInput" placeholder="พิมพ์หรือวางข้อความภาษาไทยที่นี่… เช่น สวัสดีครับ ยินดีที่ได้รู้จัก" rows="7" spellcheck="false" autocapitalize="off" autocorrect="off"></textarea>
+            <div class="panel-foot">
+              <span id="inCount">0 ตัวอักษร</span>
+            </div>
+          </div>
+
+          <div class="panel panel-output">
+            <div class="panel-head">
+              <label for="romanOutput">ผลลัพธ์อักษรโรมัน</label>
+              <button type="button" class="chip-btn chip-btn-accent" id="copyBtn">
+                <span id="copyBtnLabel">คัดลอก</span>
+              </button>
+            </div>
+            <div id="romanOutput" class="output-box" aria-live="polite" role="textbox" aria-readonly="true" aria-label="ผลลัพธ์อักษรโรมัน">
+              <span class="output-placeholder">คำอ่านอักษรโรมันจะปรากฏที่นี่ทันทีที่คุณพิมพ์…</span>
+            </div>
+            <div class="panel-foot">
+              <span id="outCount">0 พยางค์</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="examples">
+          <span class="examples-label">ลองตัวอย่าง:</span>
+          <button type="button" class="example-chip" data-text="สวัสดีครับ ยินดีที่ได้รู้จัก">สวัสดีครับ ยินดีที่ได้รู้จัก</button>
+          <button type="button" class="example-chip" data-text="ขอบคุณมากครับ สบายดีไหมครับ">ขอบคุณมากครับ สบายดีไหมครับ</button>
+          <button type="button" class="example-chip" data-text="ผมอยากไปเที่ยวเชียงใหม่กับเพื่อน">ผมอยากไปเที่ยวเชียงใหม่กับเพื่อน</button>
+          <button type="button" class="example-chip" data-text="ร้านนี้อาหารอร่อยมากและราคาไม่แพง">ร้านนี้อาหารอร่อยมากและราคาไม่แพง</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>จุดเด่นของเครื่องมือ</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>แปลงทันที</h3>
+          <p>ประมวลผลทั้งหมดในเบราว์เซอร์ พิมพ์ปุ๊บเห็นผลปั๊บ ไม่ต้องกดปุ่ม ไม่ต้องรอโหลด</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>ตามมาตรฐาน RTGS</h3>
+          <p>ใช้หลักเกณฑ์ Royal Thai General System of Transcription ที่ราชบัณฑิตยสภากำหนด</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔊</div>
+          <h3>เครื่องหมายวรรณยุกต์</h3>
+          <p>แสดงเสียงวรรณยุกต์ทั้ง 5 เสียง (สามัญ เอก โท ตรี จัตวา) ด้วยสัญลักษณ์สัทอักษรที่อ่านง่าย</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>ใช้ได้ทุกอุปกรณ์</h3>
+          <p>ออกแบบมาให้ใช้งานสะดวกบนมือถือเป็นหลัก รองรับแท็บเล็ตและคอมพิวเตอร์เช่นกัน</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>ข้อมูลไม่ถูกส่งออก</h3>
+          <p>ไม่มีการส่งข้อความของคุณไปยังเซิร์ฟเวอร์ใด ๆ ทำงานแบบออฟไลน์ได้หลังโหลดหน้าเสร็จ</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>คัดลอกง่าย</h3>
+          <p>กดปุ่มเดียวเพื่อคัดลอกผลลัพธ์ไปวางต่อในแอปแชท เอกสาร หรือโซเชียลมีเดีย</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="guide" id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Thai Romanization คืออะไร</h2>
+      </div>
+      <div class="guide-content">
+        <p>Thai Romanization คือการถ่ายเสียงอักษรไทยให้อยู่ในรูปอักษรโรมัน (a-z) เพื่อให้ผู้ที่อ่านอักษรไทยไม่ออกสามารถออกเสียงคำภาษาไทยได้ใกล้เคียงเสียงจริงมากที่สุด ระบบที่เป็นทางการและใช้กันแพร่หลายที่สุดในประเทศไทยคือ <strong>RTGS (Royal Thai General System of Transcription)</strong> ซึ่งใช้กับป้ายถนน ชื่อสถานที่ และเอกสารราชการ</p>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <span class="step-no">1</span>
+            <div>
+              <h4>แยกพยางค์และพยัญชนะต้น</h4>
+              <p>ระบบจะวิเคราะห์คำเพื่อหาพยัญชนะต้น อักษรควบ อักษรนำ และตัวสะกด ก่อนแปลงเป็นเสียงโรมัน</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="step-no">2</span>
+            <div>
+              <h4>คำนวณเสียงวรรณยุกต์</h4>
+              <p>ใช้กฎ 3 หมู่อักษร (สูง กลาง ต่ำ) ร่วมกับรูปวรรณยุกต์และความสั้น-ยาวของสระ เพื่อหาเสียงวรรณยุกต์ที่ถูกต้อง</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <span class="step-no">3</span>
+            <div>
+              <h4>ประกอบเป็นคำอ่านโรมัน</h4>
+              <p>รวมพยัญชนะ สระ ตัวสะกด และวรรณยุกต์ เป็นคำอ่านที่อ่านออกเสียงได้ตามหลัก RTGS</p>
+            </div>
+          </div>
+        </div>
+        <p class="note">⚠️ หมายเหตุ: การถอดเสียงเป็นระบบอิงกฎ (rule-based) ซึ่งครอบคลุมคำส่วนใหญ่ในภาษาไทยได้อย่างแม่นยำ แต่คำยืมจากภาษาบาลี-สันสกฤต หรือคำที่มีตัวการันต์ซับซ้อนบางคำอาจมีความคลาดเคลื่อนได้บ้าง</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSONANTS -->
+  <section class="ref-section" id="consonants">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>ไตรยางศ์ — ตารางหมู่อักษร</h2>
+        <p>อักษรไทย 44 ตัวแบ่งเป็น 3 หมู่ ซึ่งมีผลโดยตรงต่อเสียงวรรณยุกต์</p>
+      </div>
+      <div class="table-scroll">
+        <table class="ref-table">
+          <thead>
+            <tr><th>หมู่อักษร</th><th>ตัวอักษร</th><th>ตัวอย่างเสียง</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tag tag-mid">อักษรกลาง</span></td>
+              <td class="thai-cell">ก จ ฎ ฏ ด ต บ ป อ</td>
+              <td>k, ch, d, t, b, p</td>
+            </tr>
+            <tr>
+              <td><span class="tag tag-high">อักษรสูง</span></td>
+              <td class="thai-cell">ข ฃ ฉ ฐ ถ ผ ฝ ศ ษ ส ห</td>
+              <td>kh, ch, th, ph, f, s, h</td>
+            </tr>
+            <tr>
+              <td><span class="tag tag-low">อักษรต่ำ</span></td>
+              <td class="thai-cell">ค ฅ ฆ ง ช ซ ฌ ญ ฑ ฒ ณ ท ธ น พ ฟ ภ ม ย ร ล ว ฬ ฮ</td>
+              <td>kh, ng, ch, s, y, th, n, ph, f, m, r, l, w, h</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOWELS -->
+  <section class="ref-section alt" id="vowels">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>ตารางสระ</h2>
+        <p>สระเสียงสั้นและเสียงยาวส่งผลต่อเสียงวรรณยุกต์ในคำตาย</p>
+      </div>
+      <div class="table-scroll">
+        <table class="ref-table">
+          <thead>
+            <tr><th>สระ</th><th>โรมัน</th><th>ความยาว</th><th>ตัวอย่าง</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="thai-cell">–ะ</td><td>a</td><td>สั้น</td><td>กะ → ka</td></tr>
+            <tr><td class="thai-cell">–า</td><td>a</td><td>ยาว</td><td>มา → maa → ma</td></tr>
+            <tr><td class="thai-cell">–ิ</td><td>i</td><td>สั้น</td><td>สิ → si</td></tr>
+            <tr><td class="thai-cell">–ี</td><td>i</td><td>ยาว</td><td>ดี → dii → di</td></tr>
+            <tr><td class="thai-cell">–ึ</td><td>ue</td><td>สั้น</td><td>หึ → hue</td></tr>
+            <tr><td class="thai-cell">–ื</td><td>ue</td><td>ยาว</td><td>มือ → mue</td></tr>
+            <tr><td class="thai-cell">–ุ</td><td>u</td><td>สั้น</td><td>ดุ → du</td></tr>
+            <tr><td class="thai-cell">–ู</td><td>u</td><td>ยาว</td><td>ดู → duu → du</td></tr>
+            <tr><td class="thai-cell">เ–ะ</td><td>e</td><td>สั้น</td><td>เละ → le</td></tr>
+            <tr><td class="thai-cell">เ–</td><td>e</td><td>ยาว</td><td>เท → thee → the</td></tr>
+            <tr><td class="thai-cell">แ–ะ</td><td>ae</td><td>สั้น</td><td>แกะ → kae</td></tr>
+            <tr><td class="thai-cell">แ–</td><td>ae</td><td>ยาว</td><td>แม่ → mae</td></tr>
+            <tr><td class="thai-cell">โ–ะ</td><td>o</td><td>สั้น</td><td>โต๊ะ → to</td></tr>
+            <tr><td class="thai-cell">โ–</td><td>o</td><td>ยาว</td><td>โต → too → to</td></tr>
+            <tr><td class="thai-cell">เ–าะ</td><td>o</td><td>สั้น</td><td>เกาะ → ko</td></tr>
+            <tr><td class="thai-cell">–อ</td><td>o</td><td>ยาว</td><td>รอ → roo → ro</td></tr>
+            <tr><td class="thai-cell">เ–ีย</td><td>ia</td><td>ยาว</td><td>เมีย → mia</td></tr>
+            <tr><td class="thai-cell">เ–ือ</td><td>uea</td><td>ยาว</td><td>เสือ → suea</td></tr>
+            <tr><td class="thai-cell">–ัว</td><td>ua</td><td>ยาว</td><td>ตัว → tua</td></tr>
+            <tr><td class="thai-cell">ใ–, ไ–</td><td>ai</td><td>สั้น</td><td>ไทย → thai</td></tr>
+            <tr><td class="thai-cell">เ–า</td><td>ao</td><td>ยาว</td><td>เขา → khao</td></tr>
+            <tr><td class="thai-cell">–ำ</td><td>am</td><td>สั้น</td><td>น้ำ → nam</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TONES -->
+  <section class="ref-section" id="tones">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>วรรณยุกต์ทั้ง 5 เสียง</h2>
+        <p>ระบบใช้สัญลักษณ์สัทอักษรสากล (IPA-style diacritics) แทนเสียงวรรณยุกต์แต่ละเสียง</p>
+      </div>
+      <div class="table-scroll">
+        <table class="ref-table">
+          <thead>
+            <tr><th>เสียงวรรณยุกต์</th><th>รูปวรรณยุกต์</th><th>สัญลักษณ์</th><th>ตัวอย่าง</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>สามัญ (Mid)</td><td>ไม่มีรูป</td><td class="tone-symbol">a</td><td>มา → maa</td></tr>
+            <tr><td>เอก (Low)</td><td>่</td><td class="tone-symbol">à</td><td>ไข่ → khài</td></tr>
+            <tr><td>โท (Falling)</td><td>้</td><td class="tone-symbol">â</td><td>ไม้ → mái... ห้า → hâa</td></tr>
+            <tr><td>ตรี (High)</td><td>๊</td><td class="tone-symbol">á</td><td>เก๊า → káo</td></tr>
+            <tr><td>จัตวา (Rising)</td><td>๋</td><td class="tone-symbol">ǎ</td><td>หมา → mǎa</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">เสียงวรรณยุกต์ที่แท้จริงยังขึ้นกับหมู่อักษรต้น (สูง/กลาง/ต่ำ) และคำเป็น-คำตายด้วย ระบบของเราคำนวณปัจจัยเหล่านี้ให้อัตโนมัติ</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>คำถามที่พบบ่อย</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>เครื่องมือนี้แม่นยำแค่ไหน?</summary>
+          <p>ระบบใช้กฎการถอดเสียงตามหลัก RTGS ร่วมกับพจนานุกรมคำยกเว้นที่พบบ่อย ครอบคลุมคำส่วนใหญ่ในภาษาไทยได้แม่นยำ แต่คำยืมภาษาบาลี-สันสกฤตหรือคำเฉพาะทางบางคำอาจต้องตรวจสอบเพิ่มเติม</p>
+        </details>
+        <details class="faq-item">
+          <summary>ใช้งานบนมือถือได้ไหม?</summary>
+          <p>ได้ครับ หน้าเว็บออกแบบให้รองรับการใช้งานบนมือถือเป็นหลัก ปรับขนาดตามหน้าจอโดยอัตโนมัติ ทั้งช่องพิมพ์ ปุ่ม และตาราง</p>
+        </details>
+        <details class="faq-item">
+          <summary>ข้อความที่พิมพ์ถูกส่งไปเก็บที่เซิร์ฟเวอร์หรือไม่?</summary>
+          <p>ไม่ครับ การแปลงข้อความทั้งหมดทำงานอยู่ในเบราว์เซอร์ของคุณเท่านั้น (client-side JavaScript) ไม่มีการส่งข้อมูลออกไปที่ใด</p>
+        </details>
+        <details class="faq-item">
+          <summary>ทำไมบางคำจึงแสดงผลไม่ตรงกับที่คาดไว้?</summary>
+          <p>ภาษาไทยมีคำพ้องรูปที่อ่านออกเสียงต่างกันตามบริบท (เช่น เพชร ที่มีตัวการันต์ซับซ้อน) หากพบคำที่แปลงผิดพลาด ระบบจะพยายามใช้กฎทั่วไปที่ใกล้เคียงที่สุด</p>
+        </details>
+        <details class="faq-item">
+          <summary>รองรับตัวเลขไทยและเครื่องหมายวรรคตอนไหม?</summary>
+          <p>รองรับครับ ตัวเลขไทย (๐-๙) จะถูกแปลงเป็นเลขอารบิก ส่วนเครื่องหมายวรรคตอน ตัวเลข และคำภาษาอังกฤษที่ปนอยู่ในข้อความจะถูกคงไว้ตามเดิม</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark small" aria-hidden="true">ก</span>
+      <span>Thai<em>Romanize</em></span>
+    </div>
+    <p>เครื่องมือแปลงอักษรไทยเป็นอักษรโรมันตามหลัก RTGS — ประมวลผลทั้งหมดในเบราว์เซอร์ของคุณ ไม่จัดเก็บหรือส่งข้อความไปที่ใด</p>
+    <p class="footer-credit">จัดทำโดย <a href="https://www.facebook.com/AroundTheThui" target="_blank" rel="noopener noreferrer">เดอะทุย</a></p>
+    <p class="footer-copy">© <span id="year"></span> ThaiRomanize — สร้างขึ้นเพื่อการศึกษาและใช้งานทั่วไป</p>
+  </div>
+</footer>
+
+<button type="button" id="toTop" class="to-top" aria-label="เลื่อนขึ้นบนสุด">↑</button>
+
+<script src="assets/js/thai-romanize.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
