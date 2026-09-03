@@ -1,0 +1,29 @@
+{
+  "name": "thai-romanize",
+  "version": "1.0.0",
+  "description": "Rule-based Thai script to Latin (RTGS) romanization engine with tone marks — zero dependencies, works in Node and the browser.",
+  "main": "assets/js/thai-romanize.js",
+  "files": [
+    "assets/js/thai-romanize.js"
+  ],
+  "keywords": [
+    "thai",
+    "romanization",
+    "romanize",
+    "rtgs",
+    "transliteration",
+    "transliterate",
+    "phonetic",
+    "thai-to-roman"
+  ],
+  "homepage": "https://thai-roman.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thetoui/ThaiRomanize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thetoui/ThaiRomanize/issues"
+  },
+  "author": "thetoui (https://www.facebook.com/AroundTheThui)",
+  "license": "MIT"
+}
