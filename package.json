@@ -5,7 +5,7 @@
   "main": "assets/js/thai-romanize.js",
   "scripts": {
     "test": "node --test tests/romanize.test.js",
-    "build": "node scripts/build-data.js"
+    "build:data": "node scripts/build-data.js"
   },
   "files": [
     "assets/js/thai-romanize.js"

@@ -135,8 +135,8 @@ ThaiRomanizer.romanize('Hello สวัสดี World 123').text; // "Hello sà
 ## พัฒนาต่อ / เพิ่มคำยกเว้น
 
 ```bash
-npm test          # ทดสอบ (node:test ไม่ต้องติดตั้งอะไรเพิ่ม)
-npm run build     # เขียน scripts/data/*.{tsv,txt} ลงใน assets/js/thai-romanize.js
+npm test            # ทดสอบ (node:test ไม่ต้องติดตั้งอะไรเพิ่ม)
+npm run build:data  # เขียน scripts/data/*.{tsv,txt} ลงใน assets/js/thai-romanize.js (ไม่ใช้ชื่อ "build" เพราะ Vercel จะรันเองแล้วหาโฟลเดอร์ public)
 ```
 
 - **`scripts/data/exceptions.tsv`** — คำอ่านยกเว้น บรรทัดละคำ `คำ<TAB>คำอ่าน` เช่น `ราชการ	rat2-cha3-kan0` (พยางค์คั่นด้วย `-` แต่ละพยางค์ลงท้ายด้วยเลขวรรณยุกต์ 0 สามัญ, 1 เอก, 2 โท, 3 ตรี, 4 จัตวา) คำที่ลงท้ายด้วย `-` เป็นคำนำหน้าที่ใช้เฉพาะเมื่อมีพยางค์ตามมา เช่น `ราช-	rat2-cha3` ทำให้ ราชการ = ราด-ชะ-กาน แต่ มหาราช ยังเป็น ราด
