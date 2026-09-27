@@ -104,7 +104,13 @@ module.exports = {
     'พิษณุโลก': 'phit3-sa1-nu3-lok2', 'กาญจนบุรี': 'kan0-cha1-na3-bu1-ri0',
     'สุโขทัย': 'su1-kho4-thai0', 'นครศรีธรรมราช': 'na3-khon0-si4-tham0-ma3-rat2',
     'ร้อยเอ็ด': 'roi3-et1', 'บุรีรัมย์': 'bu1-ri0-ram0', 'สงขลา': 'song4-khla4',
-    'ลำปาง': 'lam0-pang0', 'เพชรบุรี': 'phet3-cha3-bu1-ri0', 'ภูเก็ต': 'phu0-ket1'
+    'ลำปาง': 'lam0-pang0', 'เพชรบุรี': 'phet3-cha3-bu1-ri0', 'ภูเก็ต': 'phu0-ket1',
+    'สระแก้ว': 'sa1-kaeo2', 'สระบุรี': 'sa1-ra1-bu1-ri0'
+  },
+
+  'สระ: สะ-หระ (vowel) by default, สะ (pool) in fixed compounds': {
+    'สระ': 'sa1-ra1', 'สระอา': 'sa1-ra1-a0', 'เสียงสระ': 'siang4-sa1-ra1',
+    'สระว่ายน้ำ': 'sa1-wai2-nam3', 'สระน้ำ': 'sa1-nam3', 'จังหวัดสระแก้ว': 'chang0-wat1-sa1-kaeo2'
   },
 
   'running text (no spaces between words)': {
