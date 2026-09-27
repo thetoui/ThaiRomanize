@@ -79,7 +79,7 @@
 
   toneToggle.addEventListener('change', function () {
     withTone = toneToggle.checked;
-    toneToggleText.textContent = withTone ? 'เปิด (sà-wàt-dii)' : 'ปิด (sa-wat-dii)';
+    toneToggleText.textContent = withTone ? 'เปิด (sà-wàt-di)' : 'ปิด (sa-wat-di)';
     convert();
   });
 

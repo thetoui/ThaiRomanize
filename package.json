@@ -1,8 +1,12 @@
 {
   "name": "thai-romanize",
-  "version": "1.0.0",
-  "description": "Rule-based Thai script to Latin (RTGS) romanization engine with tone marks — zero dependencies, works in Node and the browser.",
+  "version": "1.1.0",
+  "description": "Thai script to Latin (RTGS) romanization with tone marks — rules + syllable search + exception dictionary, zero dependencies, works in Node and the browser.",
   "main": "assets/js/thai-romanize.js",
+  "scripts": {
+    "test": "node --test tests/romanize.test.js",
+    "build:data": "node scripts/build-data.js"
+  },
   "files": [
     "assets/js/thai-romanize.js"
   ],
